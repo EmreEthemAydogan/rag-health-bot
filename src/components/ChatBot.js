@@ -9,21 +9,43 @@ const ChatBot = ({ onClose }) => {
   ]);
   const [input, setInput] = useState('');
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!input.trim()) return;
 
     const userMessage = { fromUser: true, text: input };
     setMessages(prev => [...prev, userMessage]);
-
-    setTimeout(() => {
-      const botResponse = {
-        fromUser: false,
-        text: "Bu sadece örnek bir yanıttır. Yakında gerçek cevaplarla bağlanacağım! 🤖"
-      };
-      setMessages(prev => [...prev, botResponse]);
-    }, 800);
-
     setInput('');
+
+    // Geçici yükleniyor mesajı
+    setMessages(prev => [
+      ...prev,
+      { fromUser: false, text: "Yanıt oluşturuluyor... ⏳" }
+    ]);
+
+    try {
+      const response = await fetch("http://localhost:8000/ask", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ question: input })
+      });
+
+      const data = await response.json();
+
+      // Yükleniyor mesajını kaldır ve gerçek yanıtı ekle
+      setMessages(prev => [
+        ...prev.slice(0, -1),
+        { fromUser: false, text: data.answer || "Üzgünüm, şu anda bir cevap veremiyorum." }
+      ]);
+
+    } catch (error) {
+      console.error("Hata:", error);
+      setMessages(prev => [
+        ...prev.slice(0, -1),
+        { fromUser: false, text: "Bir hata oluştu. Lütfen tekrar deneyin." }
+      ]);
+    }
   };
 
   const handleKeyDown = (e) => {
