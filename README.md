@@ -44,9 +44,3 @@ Ayrıca, **RAG (Retrieval-Augmented Generation)** yaklaşımıyla tasarlanmış 
 - RAG mimarisi ile bilgi destekli cevap üretim mantığını uçtan uca göstermek
 - Görsel/PDF gibi farklı veri türleriyle çalışabilen bir asistan altyapısı oluşturmak
 
-## Proje Amaçları
-- Diyabet ve kalp krizi risklerini yapay zekâ ile tahmin etmek
-- Kullanıcılara sağlıkla ilgili sorularında kişiselleştirilmiş yanıtlar sunmak
-- Gelişmiş bir RAG mimarisi ile tutarlı ve veri destekli cevaplar üretmek
-
-
