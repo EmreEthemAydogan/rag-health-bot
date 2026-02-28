@@ -5,20 +5,44 @@
 Projenin kaynak kodları [`master` branch’inde](../../tree/master) bulunmaktadır.
 
 # rag-health-bot
+
 Diyabet ve kalp krizi riskini tahmin eden, RAG tabanlı sağlık destekli yapay zekâ sohbet botu.
 
-# RAG Sağlık Asistanı  
+## 🧠 Proje Özeti
+Bu proje, kullanıcıdan alınan sağlık verileri ile **Yapay Sinir Ağı (YSA)** modelleri üzerinden **diyabet** ve **kalp krizi** risk tahmini yapar.  
+Ayrıca, **RAG (Retrieval-Augmented Generation)** yaklaşımıyla tasarlanmış bir sohbet botu üzerinden kullanıcıya sağlık odaklı, bağlama uygun yanıtlar üretir.
 
-Bu proje, diyabet ve kalp krizi tahmini yapan bir yapay zekâ sistemidir.  
-Tahminler, Kaggle'dan alınan veri setleri ile eğitilmiş yapay sinir ağları (YSA) kullanılarak yapılmaktadır.
+## ✨ Özellikler
+- 🧬 **YSA ile hastalık tahmini:** Diyabet ve kalp krizi risk skoru/sonucu üretme
+- 🤖 **RAG tabanlı sohbet botu:** Kullanıcının sorularına bağlam ve bilgi destekli yanıt üretme
+- 🖼️ **Görsel işleme:** Image captioning benzeri akışlarla görselden anlam çıkarma
+- 📄 **PDF işleme:** PDF’ten metin çıkarma ve içerik üzerinden analiz/yorumlama
+- 📦 **Docker:** Uygulamayı container hâline getirme
+- 🔁 **GitHub & DockerHub entegrasyonu:** Sürümleme ve imaj yönetimi
 
-Bunun yanında projede:
-- **RAG (Retrieval-Augmented Generation)** mimarisiyle geliştirilmiş bir sağlık sohbet botu bulunmaktadır.
-- Chat bot, verilen cevaba göre farklı çıktılar üretmekte ve kullanıcıyla sağlık temelli doğal bir diyalog kurmaktadır.
+## 🧱 Kullanılan Teknolojiler
+### Frontend
+- **React.js**
+- JavaScript, HTML, CSS
 
-Ayrıca:
-- Görsel ve PDF dosyalarından veri alma (image captioning, text extraction) gibi ek özellikler de eklenmektedir.
-- Docker ile container hâline getirilmiş, GitHub ve DockerHub üzerinden sürekli güncellenebilir bir yapıya sahiptir.
+### Backend & ML
+- **Python**
+- **Flask**
+- **TensorFlow / Keras** (YSA modelleri)
+
+### RAG / LLM
+- **RAG (Retrieval-Augmented Generation)**
+- (Projede yer alan akışlara göre) **LangChain** ve **OpenAI API** entegrasyonu
+
+### DevOps
+- **Docker**
+- Git, GitHub, DockerHub
+
+## 🎯 Proje Amaçları
+- Diyabet ve kalp krizi risklerini yapay zekâ ile tahmin etmek
+- Kullanıcılara sağlık sorularında bağlama uygun ve tutarlı yanıtlar sunmak
+- RAG mimarisi ile bilgi destekli cevap üretim mantığını uçtan uca göstermek
+- Görsel/PDF gibi farklı veri türleriyle çalışabilen bir asistan altyapısı oluşturmak
 
 ## Proje Amaçları
 - Diyabet ve kalp krizi risklerini yapay zekâ ile tahmin etmek
