@@ -19,4 +19,4 @@ Ayrıca:
 - Kullanıcılara sağlıkla ilgili sorularında kişiselleştirilmiş yanıtlar sunmak
 - Gelişmiş bir RAG mimarisi ile tutarlı ve veri destekli cevaplar üretmek
 
-> Geliştiren: **Kurtlar Vadisi Takımı** (Emre, Emir, Mustafa) 😎
+
